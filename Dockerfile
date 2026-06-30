@@ -11,6 +11,6 @@ RUN useradd --create-home --uid 1000 appuser && chown -R appuser:appuser /thatch
 
 USER 1000
 
-EXPOSE 5000
+EXPOSE 8000
 
 CMD ["python", "chat.py"]
