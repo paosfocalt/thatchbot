@@ -9,7 +9,7 @@ COPY chat.py .
 
 RUN useradd --create-home --uid 1000 appuser && chown -R appuser:appuser /thatchbot
 
-USER appuser
+USER 1000
 
 EXPOSE 5000
 
