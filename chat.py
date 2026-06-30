@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template_string
-import google.generativeai as genai
+from google import genai
 import os
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 # Set your API key as an environment variable
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 with open("prompt.txt", "r", encoding="utf-8") as file:
     thatchprompt = file.read()
