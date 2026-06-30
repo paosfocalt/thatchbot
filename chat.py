@@ -16,10 +16,10 @@ HTML = """
 <!doctype html>
 <html>
 <head>
-    <title>Pirate Bot</title>
+    <title>Thatch Bot</title>
 </head>
 <body>
-    <h2>🏴 Pirate Bot</h2>
+    <h2> Thatch Bot</h2>
 
     <form method="post">
         <input name="message" style="width:300px" placeholder="Talk to Thatch">
