@@ -8,8 +8,6 @@ app = Flask(__name__)
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-model = genai.GenerativeModel("gemini-2.5-flash")
-
 with open("prompt.txt", "r", encoding="utf-8") as file:
     thatchprompt = file.read()
 
