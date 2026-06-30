@@ -5,7 +5,8 @@ import os
 app = Flask(__name__)
 
 # Set your API key as an environment variable
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 model = genai.GenerativeModel("gemini-2.5-flash")
 
@@ -42,7 +43,7 @@ def home():
 
         prompt = f"{thatchprompt}\nUser: {user_message}"
 
-        result = model.generate_content(prompt)
+        result = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
         response = result.text
 
     return render_template_string(HTML, response=response)
